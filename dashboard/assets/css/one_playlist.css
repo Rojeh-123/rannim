@@ -1,0 +1,21 @@
+.option-btn {
+    background-color: #7f57f1;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.option-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.option-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(127,87,241,0.6);
+}

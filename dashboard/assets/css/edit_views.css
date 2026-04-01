@@ -1,0 +1,57 @@
+.card {
+    background-color: #181818;
+    border: 1px solid #282828;
+    border-radius: 14px;
+}
+.input-group-text {
+    background-color: #181818;
+    border: 1px solid #282828;
+    color: #fff;
+}
+.form-control {
+    background-color: #181818;
+    border: 1px solid #282828;
+    color: #fff;
+}
+.form-control:focus {
+    background-color: #181818;
+    border: 1px solid #7e56f1;
+    box-shadow: none;
+    color: #fff;
+}
+.btn-spotify {
+    background-color: #7e56f1;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-spotify:hover {
+    background-color: #5b3bba;
+}
+#fileLabel {
+    cursor: pointer;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #7e56f1;
+    box-shadow: none;
+    color: #fff;
+}
+.form-select {
+    background-color: #181818;
+    border: 1px solid #282828;
+    color: #fff;
+}
+.btn-spotify {
+    background-color: #7e56f1;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 14px;
+    font-weight: 500;
+}
+.btn-spotify:hover {
+    background-color: #5b3bba;
+}

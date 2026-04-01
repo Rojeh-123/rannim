@@ -1,0 +1,9 @@
+select.form-select {
+  background-color: #181818;
+  color: #fff;
+  border: 1px solid #282828;
+}
+select.form-select option {
+  background-color: #181818;
+  color: #fff;
+}

@@ -1,0 +1,28 @@
+.lyric-card {
+    background: linear-gradient(180deg, var(--card), var(--card-2));
+    padding: 1.4rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: 0.3s ease;
+}
+
+.lyric-card:hover {
+    transform: scale(1.015);
+}
+
+.lyric-box {
+    max-height: 111px;
+    overflow-y: auto;
+    background: var(--card-2);
+    border-radius: var(--radius);
+    padding: 0.8rem;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.lyric-box pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    color: var(--text);
+    font-family: inherit;
+}

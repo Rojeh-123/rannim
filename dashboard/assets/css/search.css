@@ -1,0 +1,57 @@
+/* Main grid container */
+.main-content .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row by default */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card styles */
+.card-search {
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.card-search:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Colors for each category */
+.podcasts { background-color: #7F57F1; }
+.audiobooks { background-color: #509bf5; }
+.madeforyou { background-color: #1e3264; }
+.charts { background-color: #8d67ab; }
+.newreleases { background-color: #e91429; }
+.discover { background-color: #b49bc8; }
+.liveevents { background-color: #640aa3; }
+.hiphop { background-color: #ba5d07; }
+.pop { background-color: #e91429; }
+.country { background-color: #477d95; }
+.latin { background-color: #dc148c; }
+.rock { background-color: #e8115b; }
+.summer { background-color: #ffc862; }
+.workout { background-color: #777777; }
+.rnb { background-color: #dc148c; }
+
+/* Responsive breakpoints */
+@media (max-width: 992px) { /* Tablets */
+    .main-content .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 576px) { /* Mobile */
+    .main-content .container {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
+}

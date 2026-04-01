@@ -1,0 +1,26 @@
+/* Dark background for inputs and form controls */
+.input-group .form-control,
+.input-group .form-control.d-flex {
+    background-color: #181818 !important;
+    color: white !important;
+    border: 1px solid #333 !important; /* brighter border */
+}
+
+/* Dark background for the labels (span) */
+.input-group-text {
+    background-color: #181818 !important;
+    color: white !important;
+    border: 1px solid #333 !important; /* match input border */
+}
+
+/* Form check labels */
+.input-group .form-check-label {
+    color: white !important;
+}
+
+/* File label styling */
+#fileLabel {
+    background-color: #181818;
+    color: white;
+    border: 1px solid #333;
+}

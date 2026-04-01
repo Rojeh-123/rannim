@@ -1,0 +1,105 @@
+:root {
+  --bg:#0d0d0f;
+  --panel:#0f0f12;
+  --muted:#bdbdbd;
+  --card:#181818;
+  --card-2:#212121;
+  --accent:#7e56f1;
+  --accent-2:#5b3bba;
+  --text: #e9e9eb;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  margin:0;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--panel);
+  min-height: 100vh;
+  padding: 1rem;
+}
+.sidebar .nav-link {
+  color: var(--muted);
+  border-radius: 0.5rem;
+}
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color: #fff;
+}
+
+/* Topbar */
+.topbar {
+  background: var(--panel);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 2rem;
+}
+.topbar .search input {
+  background: var(--card);
+  border: 0;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  width: 250px;
+}
+.topbar .search button {
+  border-radius: 50px;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color: #fff;
+  border: none;
+  padding: 0.3rem 1rem;
+}
+
+/* Form Card */
+.form-card {
+  background: linear-gradient(180deg, var(--card), var(--card-2));
+  border-radius: 1rem;
+  padding: 2rem;
+  color: var(--text);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+.form-card .input-group-text {
+  background-color: #181818;
+  border: 1px solid #282828;
+  color: #fff;
+}
+.form-card .form-control {
+  background-color: #181818;
+  border: 1px solid #282828;
+  color: #fff;
+}
+.btn-spotify {
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+.btn-spotify:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1050;
+  }
+  .sidebar.show {
+    transform: translateX(0);
+  }
+}
