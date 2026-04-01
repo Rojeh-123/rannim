@@ -17,7 +17,7 @@
   </div>
 </div>
 
-<script src="<?php echo base_url(); ?>dashboard/assets/js/all_views.js"></script>
+<script src="<?php echo base_url(); ?>dashboard/assets/js/all_views.js?v=1.1"></script>
 <script>
   const all_views = document.createElement('link');
   all_views.rel = 'stylesheet';

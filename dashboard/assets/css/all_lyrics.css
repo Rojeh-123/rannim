@@ -4,6 +4,8 @@
     border-radius: var(--radius);
     border: 1px solid rgba(255,255,255,0.06);
     transition: 0.3s ease;
+    min-width: 240px;
+    margin: 0 auto;
 }
 
 .lyric-card:hover {
@@ -17,6 +19,13 @@
     border-radius: var(--radius);
     padding: 0.8rem;
     border: 1px solid rgba(255,255,255,0.08);
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;     /* Firefox */
+}
+
+.lyric-box::-webkit-scrollbar,
+.lyric-box pre::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari and Opera */
 }
 
 .lyric-box pre {

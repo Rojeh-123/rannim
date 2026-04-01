@@ -74,7 +74,7 @@
               </div>
               <div class="modal-footer" style="border-top: 1px solid #282828;">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #282828; border: none;">Close</button>
-                  <button type="button" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
+                  <button type="submit" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
               </div>
              </form>
           </div>
@@ -83,7 +83,7 @@
 
 <!-- Bootstrap JS -->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/all_views.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/all_views.js?v=1.1"></script>
 <script>
   const all_views = document.createElement('link');
   all_views.rel = 'stylesheet';

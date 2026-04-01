@@ -494,13 +494,6 @@ class Rannim extends CI_Controller {
 
 			$this->db->insert("podcasts", $data);
 
-			$podcast_id = $this->db->insert_id();
-
-			$share_link = base_url("Rannim/view/" . $podcast_id);
-
-			$this->db->where('podcast_id', $podcast_id);
-			$this->db->update('podcasts', ['share_link' => $share_link]);
-
 			redirect('Rannim/show_all_podcasts');
 		}else{
 			$msg = 2;

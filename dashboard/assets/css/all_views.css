@@ -122,7 +122,10 @@ body {
 }
 
 .col-md-4:hover,
-.col-md-3:hover {
+.col-md-3:hover,
+.col-lg-4:hover,
+.col-xl-3:hover,
+.col-sm-6:hover {
     transform: scale(1.019);
     transition: transform 0.3s;
 }

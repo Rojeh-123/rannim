@@ -111,7 +111,7 @@
   </div>
 
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/all_views.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/all_views.js?v=1.1"></script>
 <script src="<?php echo base_url(); ?>assets/js/one_podcast.js"></script>
 <script>
   const all_views = document.createElement('link');

@@ -1,8 +1,12 @@
     <!-- Main content -->
     <div class="container mt-3">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h3>My Private Playlists</h3>
-        <button class="btn btn-outline-purple text-white" data-bs-toggle="modal" data-bs-target="#add_playlist">Add Playlist</button>
+        <?php if($my_private_playlists) { ?>
+          <h3>My Private Playlists</h3>
+        <?php } ?>
+        <?php if($this->session->userdata("user_id") != null){ ?>
+          <button class="btn btn-outline-purple text-white" data-bs-toggle="modal" data-bs-target="#add_playlist">Add Playlist</button>
+        <?php } ?>
       </div>
       <div class="row g-3 mt-1">
         <?php foreach($my_private_playlists as $playlist){ ?>
@@ -69,7 +73,9 @@
         <?php } ?>
       <!-- My Section -->
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h3>My Public Playlists</h3>
+        <?php if($playlists && $this->session->userdata('user_id')) { ?>
+          <h3>My Public Playlists</h3>
+        <?php } ?>
       </div>
       <div class="row g-3 mt-1">
         <?php foreach($playlists as $playlist){ ?>
@@ -281,7 +287,7 @@
               </div>
               <div class="modal-footer" style="border-top: 1px solid #282828;">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #282828; border: none;">Close</button>
-                  <button type="button" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
+                  <button type="submit" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
               </div>
              </form>
           </div>
@@ -290,7 +296,7 @@
 
 <!-- Bootstrap JS -->
 <script src="<?php echo base_url(); ?>dashboard/assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url(); ?>dashboard/assets/js/all_views.js"></script>
+<script src="<?php echo base_url(); ?>dashboard/assets/js/all_views.js?v=1.1"></script>
 <script>
   const all_views = document.createElement('link');
   all_views.rel = 'stylesheet';

@@ -55,21 +55,22 @@
                                             Edit
                                         </a>
                                     </button>
-
-                                    <?php if($admin->account_status == "1"){ ?>
-                                        <button class="btn btn-sm btn-outline-danger">
-                                            <a href="<?php echo site_url('Rannim/disable_admin/'.$admin->admin_id); ?>" 
-                                               style="text-decoration:none; color:inherit;">
-                                                Disable
-                                            </a>
-                                        </button>
-                                    <?php }else{ ?>
-                                        <button class="btn btn-sm btn-outline-success">
-                                            <a href="<?php echo site_url('Rannim/enable_admin/'.$admin->admin_id); ?>" 
-                                               style="text-decoration:none; color:inherit;">
-                                                Enable
-                                            </a>
-                                        </button>
+                                    <?php if($this->session->userdata('admin_id') != $admin->admin_id){ ?>
+                                        <?php if($admin->account_status == "1"){ ?>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <a href="<?php echo site_url('Rannim/disable_admin/'.$admin->admin_id); ?>" 
+                                                    style="text-decoration:none; color:inherit;">
+                                                    Disable
+                                                </a>
+                                            </button>
+                                        <?php }else{ ?>
+                                            <button class="btn btn-sm btn-outline-success">
+                                                <a href="<?php echo site_url('Rannim/enable_admin/'.$admin->admin_id); ?>" 
+                                                    style="text-decoration:none; color:inherit;">
+                                                    Enable
+                                                </a>
+                                            </button>
+                                        <?php } ?>
                                     <?php } ?>
 
                                 <?php }else{ ?>
@@ -135,7 +136,7 @@
               </div>
               <div class="modal-footer" style="border-top: 1px solid #282828;">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #282828; border: none;">Close</button>
-                  <button type="button" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
+                  <button type="submit" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
               </div>
              </form>
           </div>
@@ -144,7 +145,7 @@
 
 <!-- Bootstrap JS -->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/all_views.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/all_views.js?v=1.1?v=1.1"></script>
 <script>
   const all_views = document.createElement('link');
   all_views.rel = 'stylesheet';

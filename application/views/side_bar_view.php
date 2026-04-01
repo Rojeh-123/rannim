@@ -30,9 +30,11 @@
     <ul class="nav flex-column">
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim'); ?>">🏠 Home</a></li>
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/search_view'); ?>">🔍 Search</a></li>
-      <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_add_playlist'); ?>">➕ Create Playlist</a></li>
-      <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_users'); ?>">👥 Users</a></li>
-      <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_user_profile/' . $this->session->userdata('user_id')); ?>">👤 Profile</a></li>
+      <?php if($this->session->userdata("user_id") != null){ ?>
+        <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_add_playlist'); ?>">➕ Create Playlist</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_users'); ?>">👥 Users</a></li>
+        <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_user_profile/' . $this->session->userdata('user_id')); ?>">👤 Profile</a></li>
+      <?php } ?>
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_albums'); ?>">🎵 All Albums</a></li>
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_artists'); ?>">🎤 All Artists</a></li>
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_bands'); ?>">🥁 All Bands</a></li>
@@ -41,7 +43,6 @@
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_podcasts'); ?>">🎙️ All Podcasts</a></li>
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_songs'); ?>">🎧 All Songs</a></li>
       <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_types'); ?>">🗂️ All Types</a></li>
-      <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_users'); ?>">👥 All Users</a></li>
     </ul>
   </nav>
 

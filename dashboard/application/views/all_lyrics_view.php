@@ -7,14 +7,14 @@
       </div>
       <div class="row g-3 mt-1">
             <?php foreach($lyrics as $lyric){ ?>
-                <div class="col-md-4">
-                    <div class="card card-custom lyric-card" style="width: 26rem;">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-4">
+                    <div class="card card-custom lyric-card">
 
                         <!-- Title -->
                         <h4 class="fw-bold mb-3">🎵 <?php echo $lyric->title; ?></h4>
 
                         <!-- Artist + Genre -->
-                        <div class="d-flex justify-content-between mb-3" style="color: var(--muted); font-size: 0.95rem;">
+                        <div class="d-flex flex-column mb-3" style="color: var(--muted); font-size: 0.85rem; gap: 4px;">
                             <span><strong>Artist:</strong> <?php echo $lyric->artist_name; ?></span>
                             <span><strong>Genre:</strong> <?php echo $lyric->category_name; ?></span>
                         </div>
@@ -25,9 +25,9 @@
                         </div>
 
                         <!-- Buttons -->
-                        <div class="d-flex justify-content-evenly mt-2">
-                            <button onclick="edit_lyric_modal(<?= $lyric->lyric_id ?>)" data-bs-toggle="modal" data-bs-target="#edit_lyric" class="btn btn-outline-primary fw-bold px-4">Edit</button>
-                            <button class="btn btn-outline-danger fw-bold px-4"><a href="<?php echo site_url('Rannim/delete_lyric/'. $lyric->lyric_id); ?>" style="text-decoration: none; color: inherit;">Delete</a></button>
+                        <div class="d-flex justify-content-between mt-2 gap-2">
+                            <button onclick="edit_lyric_modal(<?= $lyric->lyric_id ?>)" data-bs-toggle="modal" data-bs-target="#edit_lyric" class="btn btn-sm btn-outline-primary fw-bold flex-grow-1">Edit</button>
+                            <button class="btn btn-sm btn-outline-danger fw-bold flex-grow-1"><a href="<?php echo site_url('Rannim/delete_lyric/'. $lyric->lyric_id); ?>" style="text-decoration: none; color: inherit;">Delete</a></button>
                         </div>
 
                     </div>
@@ -35,7 +35,6 @@
             <?php } ?>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
@@ -74,7 +73,7 @@
               </div>
               <div class="modal-footer" style="border-top: 1px solid #282828;">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #282828; border: none;">Close</button>
-                  <button type="button" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
+                  <button type="submit" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
               </div>
              </form>
           </div>
@@ -109,7 +108,7 @@
               </div>
               <div class="modal-footer" style="border-top: 1px solid #282828;">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #282828; border: none;">Close</button>
-                  <button type="button" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
+                  <button type="submit" class="btn btn-success" style="background-color: #7e56f1; border: none;">Save</button>
               </div>
              </form>
           </div>
@@ -118,7 +117,7 @@
 
 <!-- Bootstrap JS -->
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/all_views.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/all_views.js?v=1.1"></script>
 <script>
   const all_views = document.createElement('link');
   all_views.rel = 'stylesheet';
@@ -127,7 +126,7 @@
   
   const all_lyrics = document.createElement('link');
   all_lyrics.rel = 'stylesheet';
-  all_lyrics.href = '<?php echo base_url(); ?>assets/css/all_lyrics.css';
+  all_lyrics.href = '<?php echo base_url(); ?>assets/css/all_lyrics.css?v=1.1';
   document.head.appendChild(all_lyrics);
 </script>
 <script>
