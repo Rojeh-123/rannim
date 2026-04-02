@@ -29,7 +29,7 @@
     </div>
 <ul class="nav flex-column">
     <!-- About Developer -->
-    <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_our_view'); ?>">👨‍💻 About Developers</a></li>
+    <!-- <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_our_view'); ?>">👨‍💻 About Developers</a></li> -->
 
     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_admins'); ?>">🏠 Home</a></li>
     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/search_view'); ?>">🔍 Search</a></li>
