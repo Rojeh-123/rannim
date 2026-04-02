@@ -155,7 +155,7 @@
     function edit_country_modal(country_id) {
     $.ajax({
         type: "GET",
-        url: "http://localhost/rannim/dashboard/index.php/Rannim/edit_country/" + country_id,
+        url: "<?php echo site_url("Rannim/edit_country/"); ?>" + country_id,
         dataType: "json",
         success: function(data) {
             var country = data.country;

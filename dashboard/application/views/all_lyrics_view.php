@@ -166,7 +166,7 @@
 function edit_lyric_modal(lyric_id) {
     $.ajax({
         type: "GET",
-        url: "http://localhost/rannim/dashboard/index.php/Rannim/edit_lyric/" + lyric_id,
+        url: "<?php echo site_url("Rannim/edit_lyric/"); ?>" + lyric_id,
         dataType: "json",
         success: function(data) {
             var lyric = data.lyric;

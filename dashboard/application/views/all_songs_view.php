@@ -150,7 +150,7 @@
   function get_categories_by_type(type_id) {
     $.ajax({
         type: "GET",
-        url: "http://localhost/rannim/dashboard/index.php/Rannim/get_categories_by_type/" + type_id,
+        url: "<?php echo site_url("Rannim/get_categories_by_type/"); ?>" + type_id,
         dataType: "json",
         success: function(data) {
           var length = data.categories.length;
