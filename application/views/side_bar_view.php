@@ -63,7 +63,7 @@
         
       <?php if($this->session->userdata("user_id") != null){ ?>
         <!-- Notifications -->
-        <div class="position-relative">
+        <!-- <div class="position-relative">
           <button class="btn btn-outline-purple" id="bellBtn">🔔 <span class="badge bg-primary" id="notifBadge">3</span></button>
           <div class="popup p-2" id="notifPopup">
             <div class="d-flex align-items-center mb-2">
@@ -82,7 +82,7 @@
             </div>
             <button class="btn w-100 mt-2" style="background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;">Show more</button>
           </div>
-        </div>
+        </div> -->
 
         <!-- User -->
         <div class="position-relative">

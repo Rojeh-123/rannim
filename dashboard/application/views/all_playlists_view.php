@@ -1,3 +1,4 @@
+    <div class="container-fluid mt-3">
       <!-- Others Section -->
       <div class="d-flex justify-content-between align-items-center mb-2">
         <?php if(!empty($playlists)){ ?>

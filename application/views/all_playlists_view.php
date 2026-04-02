@@ -1,13 +1,11 @@
     <!-- Main content -->
-    <div class="container mt-3">
-      <div class="d-flex justify-content-between align-items-center mb-2">
-        <?php if($my_private_playlists) { ?>
-          <h3>My Private Playlists</h3>
-        <?php } ?>
-        <?php if($this->session->userdata("user_id") != null){ ?>
-          <button class="btn btn-outline-purple text-white" data-bs-toggle="modal" data-bs-target="#add_playlist">Add Playlist</button>
-        <?php } ?>
-      </div>
+    <div class="container-fluid mt-3 position-relative">
+      <?php if($this->session->userdata("user_id") != null){ ?>
+        <button class="btn btn-outline-purple text-white" style="position: absolute; right: 15px; top: 0;" data-bs-toggle="modal" data-bs-target="#add_playlist">Add Playlist</button>
+      <?php } ?>
+      <?php if($my_private_playlists) { ?>
+        <h3 class="mb-3">My Private Playlists</h3>
+      <?php } ?>
       <div class="row g-3 mt-1">
         <?php foreach($my_private_playlists as $playlist){ ?>
           <div class="col-md-4">
@@ -71,6 +69,7 @@
             </a>
           </div>
         <?php } ?>
+      </div>
       <!-- My Section -->
       <div class="d-flex justify-content-between align-items-center mb-2">
         <?php if($playlists && $this->session->userdata('user_id')) { ?>
@@ -144,6 +143,7 @@
           </div>
           <?php } ?>
         <?php } ?>
+      </div>
       <!-- Others Section -->
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h3>Rannim Public Playlists</h3>
