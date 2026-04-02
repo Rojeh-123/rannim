@@ -8,8 +8,8 @@
       <div class="row g-3 mt-1">
           <?php foreach($artists as $artist){ ?>
           <div class="col-md-4">
-            <a href="<?php echo site_url("Rannim/show_one_artist/$artist->artist_id"); ?>" style="text-decoration:none;">
               <div class="card card-custom h-100">
+                <a href="<?php echo site_url("Rannim/show_one_artist/$artist->artist_id"); ?>" style="text-decoration:none;">
                   <img src="<?php echo base_url(); ?>assets/uploads/artists_photos/<?php echo $artist->artist_photo; ?>" 
                       class="card-img-top" style="height:180px; object-fit:cover;">
                   <div class="card-body">
@@ -17,13 +17,13 @@
                     <p class="card-text text-secondary">Country • <?php echo $artist->country_name; ?></p>
                     <?php $number_of_songs = $this->Rannim_model->count_artist_songs_num($artist->artist_id); ?>
                     <small class="text-secondary"><?php echo $number_of_songs ?> Songs • Artist</small>
-                    <div class="mt-2 d-flex gap-2">
-                        <button class="btn btn-sm btn-outline-primary"><a href="<?php echo site_url("Rannim/edit_artist/$artist->artist_id"); ?>" style="text-decoration:none; color:inherit;">Edit</a></button>
-                        <button class="btn btn-sm btn-outline-danger"><a href="<?php echo site_url("Rannim/delete_artist/$artist->artist_id/$artist->artist_photo"); ?>" style="text-decoration:none; color:inherit;">Delete</a></button>
-                    </div>
                   </div>
+                </a>
+                <div class="mt-2 p-3 pt-0 d-flex gap-2">
+                    <a href="<?php echo site_url("Rannim/edit_artist/$artist->artist_id"); ?>" class="btn btn-sm btn-outline-primary" style="text-decoration:none;">Edit</a>
+                    <a href="<?php echo site_url("Rannim/delete_artist/$artist->artist_id/$artist->artist_photo"); ?>" class="btn btn-sm btn-outline-danger" style="text-decoration:none;">Delete</a>
+                </div>
               </div>
-            </a>
           </div>
         <?php } ?>
       </div>

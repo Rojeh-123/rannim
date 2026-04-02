@@ -8,7 +8,7 @@
       </div>
       <div class="row g-3">
         <?php foreach($songs as $song){ ?>
-          <div class="col-md-4">
+          <div class="col-md-4" onclick="window.location.href='<?php echo site_url("Rannim/show_one_song/$song->song_id"); ?>'">
             <div class="card card-custom h-100">
               <img src="<?php echo base_url(); ?>assets/uploads/songs_photos/<?php echo $song->song_photo; ?>" 
                   class="card-img-top" style="height:180px; object-fit:cover;">
@@ -29,7 +29,7 @@
       </div>
       <div class="row g-3">
         <?php foreach($podcasts as $podcast){ ?>
-          <div class="col-md-4">
+          <div class="col-md-4" onclick="window.location.href='<?php echo site_url("Rannim/show_one_podcast/$podcast->podcast_id"); ?>'">
             <div class="card card-custom h-100">
               <img src="<?php echo base_url(); ?>assets/uploads/podcasts_photos/<?php echo $podcast->podcast_thumbnail; ?>" 
                   class="card-img-top" style="height:180px; object-fit:cover;">

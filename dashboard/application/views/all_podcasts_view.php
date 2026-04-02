@@ -12,40 +12,27 @@
         <div class="row g-3 mt-1">
             <?php foreach($podcasts as $podcast){ ?>
             <div class="col-md-4">
-                <a href="<?php echo site_url("Rannim/show_one_podcast/$podcast->podcast_id"); ?>" style="text-decoration:none;">
                 <div class="card card-custom h-100">
+                    <a href="<?php echo site_url("Rannim/show_one_podcast/$podcast->podcast_id"); ?>" style="text-decoration:none;">
+                        <img src="<?php echo base_url(); ?>assets/uploads/podcasts_photos/<?php echo $podcast->podcast_thumbnail; ?>" 
+                            class="card-img-top"
+                            style="height:180px; object-fit:cover;">
 
-                    <img src="<?php echo base_url(); ?>assets/uploads/podcasts_photos/<?php echo $podcast->podcast_thumbnail; ?>" 
-                        class="card-img-top"
-                        style="height:180px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-white"><?php echo $podcast->title; ?></h5>
+                            <small class="text-secondary">Host • <?php echo $podcast->artist_name; ?></small><br>
 
-                    <div class="card-body">
-                        <h5 class="card-title text-white"><?php echo $podcast->title; ?></h5>
-                        <small class="text-secondary">Host • <?php echo $podcast->artist_name; ?></small><br>
-
-                        <div class="d-flex justify-content-between">
-                            <span class="text-secondary">Category • <?php echo $podcast->category_name; ?></span>
-                            <span class="text-secondary">Type • <?php echo $podcast->type_name; ?></span>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-secondary">Category • <?php echo $podcast->category_name; ?></span>
+                                <span class="text-secondary">Type • <?php echo $podcast->type_name; ?></span>
+                            </div>
                         </div>
-
-                        <div class="mt-2 d-flex gap-2">
-                            <button class="btn btn-sm btn-outline-primary">
-                                <a href="<?php echo site_url("Rannim/edit_podcast/$podcast->podcast_id"); ?>"
-                                style="text-decoration:none; color:inherit;">
-                                Edit
-                                </a>
-                            </button>
-
-                            <button class="btn btn-sm btn-outline-danger">
-                                <a href="<?php echo site_url("Rannim/delete_podcast/$podcast->podcast_id/$podcast->podcast_thumbnail"); ?>"
-                                style="text-decoration:none; color:inherit;">
-                                Delete
-                                </a>
-                            </button>
-                        </div>
+                    </a>
+                    <div class="mt-2 p-3 pt-0 d-flex gap-2">
+                        <a href="<?php echo site_url("Rannim/edit_podcast/$podcast->podcast_id"); ?>" class="btn btn-sm btn-outline-primary" style="text-decoration:none;">Edit</a>
+                        <a href="<?php echo site_url("Rannim/delete_podcast/$podcast->podcast_id/$podcast->podcast_thumbnail"); ?>" class="btn btn-sm btn-outline-danger" style="text-decoration:none;">Delete</a>
                     </div>
                 </div>
-                </a>
             </div>
             <?php } ?>
         </div>
@@ -148,7 +135,7 @@
   function get_categories_by_type(type_id) {
     $.ajax({
         type: "GET",
-        url: "http://localhost/rannim/dashboard/index.php/Rannim/get_categories_by_type/" + type_id,
+        url: "<?php echo site_url('Rannim/get_categories_by_type/'); ?>" + type_id,
         dataType: "json",
         success: function(data) {
           var length = data.categories.length;

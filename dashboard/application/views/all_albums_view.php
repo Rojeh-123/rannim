@@ -8,21 +8,21 @@
       <div class="row g-3 mt-1">
         <?php foreach($albums as $album){ ?>
         <div class="col-md-4">
-          <a href="<?php echo site_url("Rannim/show_one_album/$album->album_id"); ?>" style="text-decoration:none;">
             <div class="card card-custom h-100">
-                <img src="<?php echo base_url(); ?>assets/uploads/albums_photos/<?php echo $album->album_photo; ?>" 
-                    class="card-img-top" style="height:180px; object-fit:cover;">
-                <div class="card-body">
-                    <h5 class="card-title text-white"><?php echo $album->album_name; ?></h5>
-                    <p class="card-text text-secondary">Category • <?php echo $album->category_name; ?></p>
-                    <small class="text-secondary"><?php echo isset($number_of_songs[$album->album_id]) ? $number_of_songs[$album->album_id] : '0'; ?> Songs • Album</small>
-                    <div class="mt-2 d-flex gap-2">
-                        <button class="btn btn-sm btn-outline-primary"><a href="<?php echo site_url("Rannim/edit_album/$album->album_id"); ?>" style="text-decoration:none; color:inherit;">Edit</a></button>
-                        <button class="btn btn-sm btn-outline-danger"><a href="<?php echo site_url("Rannim/delete_album/$album->album_id/$album->album_photo"); ?>" style="text-decoration:none; color:inherit;">Delete</a></button>
+                <a href="<?php echo site_url("Rannim/show_one_album/$album->album_id"); ?>" style="text-decoration:none;">
+                    <img src="<?php echo base_url(); ?>assets/uploads/albums_photos/<?php echo $album->album_photo; ?>" 
+                        class="card-img-top" style="height:180px; object-fit:cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-white"><?php echo $album->album_name; ?></h5>
+                        <p class="card-text text-secondary">Category • <?php echo $album->category_name; ?></p>
+                        <small class="text-secondary"><?php echo isset($number_of_songs[$album->album_id]) ? $number_of_songs[$album->album_id] : '0'; ?> Songs • Album</small>
                     </div>
+                </a>
+                <div class="mt-2 p-3 pt-0 d-flex gap-2">
+                    <a href="<?php echo site_url("Rannim/edit_album/$album->album_id"); ?>" class="btn btn-sm btn-outline-primary" style="text-decoration:none;">Edit</a>
+                    <a href="<?php echo site_url("Rannim/delete_album/$album->album_id/$album->album_photo"); ?>" class="btn btn-sm btn-outline-danger" style="text-decoration:none;">Delete</a>
                 </div>
             </div>
-          </a>
         </div>
         <?php } ?>
       </div>

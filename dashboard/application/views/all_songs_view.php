@@ -9,8 +9,8 @@
       <div class="row g-3 mt-1">
         <?php foreach($songs as $song){ ?>
           <div class="col-md-4">
-            <a href="<?php echo site_url("Rannim/show_one_song/$song->song_id"); ?>" style="text-decoration:none;">
               <div class="card card-custom h-100">
+                <a href="<?php echo site_url("Rannim/show_one_song/$song->song_id"); ?>" style="text-decoration:none;">
                   <img src="<?php echo base_url(); ?>assets/uploads/songs_photos/<?php echo $song->song_photo; ?>" 
                       class="card-img-top" style="height:180px; object-fit:cover;">
                   <div class="card-body">
@@ -20,13 +20,13 @@
                       <span class="text-secondary">Category • <?php echo $song->category_name; ?></span>
                       <span class="text-secondary">Type • <?php echo $song->type_name; ?></span>
                     </div>
-                    <div class="mt-2 d-flex gap-2">
-                        <button class="btn btn-sm btn-outline-primary"><a href="<?php echo site_url("Rannim/edit_song/$song->song_id"); ?>" style="text-decoration:none; color:inherit;">Edit</a></button>
-                        <button class="btn btn-sm btn-outline-danger"><a href="<?php echo site_url("Rannim/delete_song/$song->song_id/$song->song_photo"); ?>" style="text-decoration:none; color:inherit;">Delete</a></button>
-                    </div>
                   </div>
+                </a>
+                <div class="mt-2 p-3 pt-0 d-flex gap-2">
+                    <a href="<?php echo site_url("Rannim/edit_song/$song->song_id"); ?>" class="btn btn-sm btn-outline-primary" style="text-decoration:none;">Edit</a>
+                    <a href="<?php echo site_url("Rannim/delete_song/$song->song_id/$song->song_photo"); ?>" class="btn btn-sm btn-outline-danger" style="text-decoration:none;">Delete</a>
+                </div>
               </div>
-            </a>
           </div>
         <?php } ?>
       </div>

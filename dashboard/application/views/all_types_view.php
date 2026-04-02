@@ -10,20 +10,20 @@
         <?php foreach($types as $type){ ?>
           <div class="col-md-4">
               <div class="card card-custom h-100">
-            <a href="<?php echo site_url("Rannim/show_one_type/$type->type_id"); ?>" style="text-decoration:none;">
-                  <img src="<?php echo base_url(); ?>assets/uploads/types_photos/<?php echo $type->type_photo; ?>" 
-                      class="card-img-top" style="height:180px; object-fit:cover;">
-                  <div class="card-body">
-                    <h5 class="card-title text-white"><?php echo $type->type_name; ?></h5>
-                    <small class="text-secondary">Rannim • Type</small>
-            </a>
-                    <div class="mt-2 d-flex gap-2">
+                    <a href="<?php echo site_url("Rannim/show_one_type/$type->type_id"); ?>" style="text-decoration:none;">
+                        <img src="<?php echo base_url(); ?>assets/uploads/types_photos/<?php echo $type->type_photo; ?>" 
+                            class="card-img-top" style="height:180px; object-fit:cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-white"><?php echo $type->type_name; ?></h5>
+                            <small class="text-secondary">Rannim • Type</small>
+                        </div>
+                    </a>
+                    <div class="mt-2 p-3 pt-0 d-flex gap-2">
                         <button onclick="edit_type_modal(<?= $type->type_id ?>)" data-bs-toggle="modal" data-bs-target="#edit_type" class="btn btn-sm btn-outline-primary">Edit</button>
-                        <button class="btn btn-sm btn-outline-danger"><a href="<?php echo site_url("Rannim/delete_ctype/$type->type_id/$type->type_photo"); ?>" style="text-decoration:none; color:inherit;">Delete</a></button>
+                        <a href="<?php echo site_url("Rannim/delete_type/$type->type_id/$type->type_photo"); ?>" class="btn btn-sm btn-outline-danger" style="text-decoration:none;">Delete</a>
                     </div>
                   </div>
               </div>
-          </div>
         <?php } ?>
       </div>
     </div>
@@ -143,7 +143,7 @@
     function edit_type_modal(type_id) {
     $.ajax({
         type: "GET",
-        url: "http://localhost/rannim/dashboard/index.php/Rannim/edit_type/" + type_id,
+        url: "<?php echo site_url('Rannim/edit_type/'); ?>" + type_id,
         dataType: "json",
         success: function(data) {
             var type = data.type;

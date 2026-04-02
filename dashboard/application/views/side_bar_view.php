@@ -36,7 +36,7 @@
 
     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_users'); ?>">👥 Users</a></li>
     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_admins'); ?>">🛡️ Admins</a></li>
-    <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_countries'); ?>">🌍 Countries</a></li>
+    <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_countries'); ?>">🌍 All Countries</a></li>
 
     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_albums'); ?>">🎵 All Albums</a></li>
     <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Rannim/show_all_artists'); ?>">🎤 All Artists</a></li>
